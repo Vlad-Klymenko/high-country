@@ -13,9 +13,9 @@
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='16' width='64' height='64' fill='%23273229'/%3E%3Cpath d='M8 45 25 22l9 12 7-9 15 20' fill='none' stroke='%23e6e4cc' stroke-width='3'/%3E%3C/svg%3E"
     />
-    <script type="module" crossorigin src="/high-country/assets/index-DwA5aUuG.js"></script>
+    <script type="module" crossorigin src="/high-country/assets/index-tR4BKFOF.js"></script>
     <link rel="modulepreload" crossorigin href="/high-country/assets/three-H8BIG-sh.js">
-    <link rel="stylesheet" crossorigin href="/high-country/assets/index-CkeHUvzx.css">
+    <link rel="stylesheet" crossorigin href="/high-country/assets/index-V9GRQnA6.css">
   </head>
   <body>
     <canvas
@@ -84,6 +84,9 @@
             Sit back &amp; auto-drive
           </button>
         </div>
+        <p id="controller-prompt" class="controller-prompt">
+          Controller support · press any button to connect
+        </p>
         <div class="route-picker" aria-label="Starting roads">
           <button class="active" data-route="valley">
             01 <span>Valley road</span></button
@@ -141,6 +144,31 @@
           The road keeps going. Auto-drive follows the left lane; steer or brake
           to take over.
         </p>
+        <details class="controller-help">
+          <summary>Controller controls</summary>
+          <p id="controller-status" role="status">
+            Connect a controller, then press any button.
+          </p>
+          <dl>
+            <dt>Steer / look</dt>
+            <dd>Left / right stick</dd>
+            <dt>Accelerate / brake</dt>
+            <dd><b data-pad="throttle">RT</b> / <b data-pad="brake">LT</b></dd>
+            <dt>Handbrake / reset</dt>
+            <dd><b data-pad="confirm">A</b> / <b data-pad="back">B</b></dd>
+            <dt>Auto-drive / camera</dt>
+            <dd><b data-pad="auto">X</b> / <b data-pad="camera">Y</b></dd>
+            <dt>Pause / photo mode</dt>
+            <dd><b data-pad="pause">Menu</b> / <b data-pad="photo">View</b></dd>
+            <dt>Settings / look back</dt>
+            <dd><b data-pad="settings">RB</b> / left bumper</dd>
+          </dl>
+          <p>
+            D-pad or left stick navigates menus. Left / right adjusts settings.
+            In photo mode, left stick moves, triggers rise / fall, and clicking
+            the left stick moves faster.
+          </p>
+        </details>
         <p class="panel-note asset-credit">
           Car model by
           <a
@@ -220,6 +248,25 @@
           ⛶ Fullscreen
         </button>
       </div>
+      <div class="controller-controls" aria-label="Controller driving controls">
+        <span>LEFT STICK steer</span
+        ><span
+          ><b data-pad="throttle">RT</b> accelerate ·
+          <b data-pad="brake">LT</b> brake</span
+        >
+        <span
+          ><b data-pad="confirm">A</b> handbrake ·
+          <b data-pad="back">B</b> reset</span
+        >
+        <span
+          ><b data-pad="auto">X</b> auto-drive ·
+          <b data-pad="camera">Y</b> camera</span
+        >
+        <span
+          ><b data-pad="pause">Menu</b> pause ·
+          <b data-pad="settings">RB</b> settings</span
+        >
+      </div>
       <div id="touch-controls">
         <div>
           <button data-touch="left" aria-label="Steer left">←</button
@@ -233,9 +280,13 @@
     </div>
     <div id="photo-hint" hidden>
       PHOTO MODE
-      <span
+      <span class="keyboard-photo"
         >WASD move · Space / Ctrl rise &amp; fall · Drag look · P return to
         car</span
+      >
+      <span class="controller-photo"
+        >Left stick move · Right stick look · Triggers rise / fall ·
+        <b data-pad="photo">View</b> return</span
       >
     </div>
     <div id="toast" role="status"></div>
