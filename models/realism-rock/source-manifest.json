@@ -1,0 +1,277 @@
+{
+  "info": {
+    "donated": true,
+    "date_published": 1625215907,
+    "name": "Rock Moss Set 02",
+    "type": 2,
+    "staging": null,
+    "authors": {
+      "Kless Gyzen": "All"
+    },
+    "categories": [
+      "rocks",
+      "nature",
+      "collection: pine_forest"
+    ],
+    "tags": [
+      "rocks",
+      "outdoor",
+      "stones",
+      "pebbles",
+      "rock",
+      "dirt"
+    ],
+    "max_resolution": [
+      8192,
+      8192
+    ],
+    "polycount": 57647,
+    "texel_density": 796.1940908773431,
+    "dimensions": [
+      8278.153419494629,
+      3410.416603088379,
+      1368.368238210678
+    ],
+    "sponsors": [
+      "82322099"
+    ],
+    "files_hash": "b67decad66a9030c0c8c8c730c06194af880eebf",
+    "description": "Free 8K set of weathered moss-covered rocks and stones, with varied shapes, earthy tones, dirt-streaked surfaces and detailed, realistic crevices.",
+    "category_id": "75be0f95-5fbf-5ce3-94a8-4b929bf42fb6",
+    "category": "Nature/Rocks & Stone/Stone Sets",
+    "collections": [
+      "pine_forest"
+    ],
+    "attributes": {
+      "condition": [
+        "weathered"
+      ],
+      "material": [
+        "stone"
+      ]
+    },
+    "img_version": "2acc6bcd",
+    "download_count": 100132,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/rock_moss_set_02.png?width=256&height=256&format=webp&v=2acc6bcd"
+  },
+  "manifest": {
+    "include": {
+      "textures/rock_moss_set_02_nor_gl_1k.jpg": {
+        "size": 273527,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_nor_gl_1k.jpg",
+        "md5": "936601de53528f15a12d16a7e187a4f1"
+      },
+      "textures/rock_moss_set_02_diff_1k.jpg": {
+        "size": 194307,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_diff_1k.jpg",
+        "md5": "50a31622ba7d6f3b8157035ce375de4d"
+      },
+      "textures/rock_moss_set_02_rough_1k.jpg": {
+        "size": 146226,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_rough_1k.jpg",
+        "md5": "5de4c0669f19304230fa550a8f3ac0f4"
+      },
+      "rock_moss_set_02.bin": {
+        "size": 1316572,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/rock_moss_set_02/rock_moss_set_02.bin",
+        "md5": "a63878339f14feceab7347cc28110eaa"
+      }
+    },
+    "size": 11608,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/rock_moss_set_02/rock_moss_set_02_1k.gltf",
+    "md5": "257569e8c064d0cf198ff866446a5f96"
+  },
+  "files": [
+    {
+      "file": "rock_moss_set_02_1k.gltf",
+      "bytes": 11608,
+      "md5": "257569e8c064d0cf198ff866446a5f96",
+      "sha256": "c3b992a7622e94f7d8da97a47277a2a5177a513af0312a127ec908d4056c97db",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/rock_moss_set_02/rock_moss_set_02_1k.gltf",
+      "dimensions": null
+    },
+    {
+      "file": "textures/rock_moss_set_02_nor_gl_1k.jpg",
+      "bytes": 273527,
+      "md5": "936601de53528f15a12d16a7e187a4f1",
+      "sha256": "dd2503789089fb72ef469efd14364d393e769c0de8781a251475cac7e0b6f51d",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_nor_gl_1k.jpg",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "textures/rock_moss_set_02_diff_1k.jpg",
+      "bytes": 194307,
+      "md5": "50a31622ba7d6f3b8157035ce375de4d",
+      "sha256": "91dd2cc77d5198b067d77e5bdb3fa8ee7b8950aeff5aec2c1ccaddb76dcca481",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_diff_1k.jpg",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "textures/rock_moss_set_02_rough_1k.jpg",
+      "bytes": 146226,
+      "md5": "5de4c0669f19304230fa550a8f3ac0f4",
+      "sha256": "12252219a98a560940359973e83af831abdcfab0ead3f0a2a7b135a0143105f1",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/rock_moss_set_02/rock_moss_set_02_rough_1k.jpg",
+      "dimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "file": "rock_moss_set_02.bin",
+      "bytes": 1316572,
+      "md5": "a63878339f14feceab7347cc28110eaa",
+      "sha256": "2df9d8eaaca4207529b0f613d4886d3962d0b9ffc0cdfd2bc4bf35dbcd391cb5",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/rock_moss_set_02/rock_moss_set_02.bin",
+      "dimensions": null
+    }
+  ],
+  "summary": [
+    {
+      "meshIndex": 0,
+      "name": "low.001",
+      "triangles": 8000,
+      "vertices": 4154,
+      "accessorBounds": [
+        {
+          "min": [
+            -0.534639835357666,
+            -0.011003829538822174,
+            -0.44412750005722046
+          ],
+          "max": [
+            0.6716915369033813,
+            0.5176680684089661,
+            0.5395184755325317
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 1,
+      "name": "moss rock 10.001",
+      "triangles": 7894,
+      "vertices": 4109,
+      "accessorBounds": [
+        {
+          "min": [
+            -0.7779536247253418,
+            -0.03787674382328987,
+            -0.5260857939720154
+          ],
+          "max": [
+            0.8509746789932251,
+            0.571977972984314,
+            0.4853838384151459
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 2,
+      "name": "moss rock 13",
+      "triangles": 7999,
+      "vertices": 4317,
+      "accessorBounds": [
+        {
+          "min": [
+            -0.7580254077911377,
+            -0.032221224159002304,
+            -0.7263228297233582
+          ],
+          "max": [
+            0.8215271830558777,
+            0.7037891149520874,
+            0.7171337008476257
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 3,
+      "name": "moss rock 14.001",
+      "triangles": 7928,
+      "vertices": 4189,
+      "accessorBounds": [
+        {
+          "min": [
+            -1.0845192670822144,
+            -0.6590298414230347,
+            -1.1344274282455444
+          ],
+          "max": [
+            1.006909966468811,
+            0.5974030494689941,
+            0.003854435868561268
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 4,
+      "name": "moss rock 11.001",
+      "triangles": 8000,
+      "vertices": 4162,
+      "accessorBounds": [
+        {
+          "min": [
+            -1.0639867782592773,
+            -0.024319272488355637,
+            -0.7845621705055237
+          ],
+          "max": [
+            1.1389367580413818,
+            0.7441345453262329,
+            0.7670738697052002
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 5,
+      "name": "moss rock 12",
+      "triangles": 8000,
+      "vertices": 4230,
+      "accessorBounds": [
+        {
+          "min": [
+            -0.9855588674545288,
+            -0.2573341727256775,
+            -0.953721284866333
+          ],
+          "max": [
+            0.9681395888328552,
+            1.0531895160675049,
+            0.5751612186431885
+          ]
+        }
+      ]
+    },
+    {
+      "meshIndex": 6,
+      "name": "low.004",
+      "triangles": 9826,
+      "vertices": 5173,
+      "accessorBounds": [
+        {
+          "min": [
+            -1.3140548467636108,
+            -0.47013798356056213,
+            -0.9021351337432861
+          ],
+          "max": [
+            1.1793811321258545,
+            0.6267833113670349,
+            0.8875125646591187
+          ]
+        }
+      ]
+    }
+  ]
+}

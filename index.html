@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#26372e" />
+    <meta
+      name="description"
+      content="An endless quiet drive through the Australian high country. Procedural roads, snow gums and long horizons."
+    />
+    <title>High Country — the long way home</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect rx='16' width='64' height='64' fill='%23273229'/%3E%3Cpath d='M8 45 25 22l9 12 7-9 15 20' fill='none' stroke='%23e6e4cc' stroke-width='3'/%3E%3C/svg%3E"
+    />
+    <script type="module" crossorigin src="/high-country/assets/index-DwA5aUuG.js"></script>
+    <link rel="modulepreload" crossorigin href="/high-country/assets/three-H8BIG-sh.js">
+    <link rel="stylesheet" crossorigin href="/high-country/assets/index-CkeHUvzx.css">
+  </head>
+  <body>
+    <canvas
+      id="world"
+      tabindex="0"
+      aria-label="High Country procedural driving game"
+    ></canvas>
+    <div id="loading">
+      <div class="loading-mark">HC<span>↟</span></div>
+      <p>THE ROAD IS YOURS</p>
+      <div class="load-track"><i></i></div>
+      <span id="loading-detail">Finding the long way home…</span>
+    </div>
+    <div id="interface">
+      <header>
+        <a
+          class="brand"
+          id="home"
+          href="#"
+          aria-label="Pause and show the main menu"
+          ><svg viewBox="0 0 40 28">
+            <path d="M1 26 15 4l9 13 5-8 10 17M10 13l5 4 4-3" /></svg
+          ><span
+            ><strong>High Country</strong
+            ><small>A QUIET DRIVE THROUGH THE SNOWY MONARO</small></span
+          ></a
+        >
+        <div class="header-actions">
+          <span id="game-status">THE LONG WAY HOME</span
+          ><span id="performance"
+            ><i></i><span id="fps">—</span><small>FPS</small></span
+          ><button
+            class="icon-button"
+            id="sound"
+            aria-label="Enable driving and ambient sound"
+            title="Sound"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M11 5 6 9H3v6h3l5 4zM15 9c2 2 2 4 0 6M18 6c4 4 4 8 0 12"
+              /></svg
+            ><span class="sound-slash"></span></button
+          ><button
+            class="icon-button"
+            id="settings-toggle"
+            aria-label="Open driving settings"
+            title="Settings"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16M4 17h16M8 4v6M16 14v6" />
+            </svg>
+          </button>
+        </div>
+      </header>
+      <section id="intro">
+        <span class="eyebrow"><i></i> NO DESTINATION REQUIRED</span>
+        <h1>Take the<br />long way home.</h1>
+        <p>
+          Winding roads. Snow gums. Nothing to hurry for.<br />Find your own
+          rhythm in the Australian high country.
+        </p>
+        <div class="intro-actions">
+          <button id="start-drive" class="primary">
+            Take the wheel <span>↗</span></button
+          ><button id="start-auto" class="secondary">
+            Sit back &amp; auto-drive
+          </button>
+        </div>
+        <div class="route-picker" aria-label="Starting roads">
+          <button class="active" data-route="valley">
+            01 <span>Valley road</span></button
+          ><button data-route="creek">02 <span>Riverbend</span></button
+          ><button data-route="ridge">03 <span>Alpine climb</span></button>
+        </div>
+      </section>
+      <aside id="settings" class="glass" hidden>
+        <div class="panel-header">
+          <span>Your kind of drive</span
+          ><button
+            class="text-button"
+            id="settings-close"
+            aria-label="Close settings"
+          >
+            ×
+          </button>
+        </div>
+        <label class="setting-label">THE LIGHT</label>
+        <div class="segmented">
+          <button data-time="golden" class="selected">Golden hour</button
+          ><button data-time="noon">Midday</button
+          ><button data-time="dusk">Sunset</button>
+        </div>
+        <label class="setting-label" for="distance">THE HORIZON</label
+        ><select id="distance">
+          <option value="16000">Long · 16 km</option>
+          <option value="24000" selected>Far · 24 km</option>
+          <option value="32000">Ultra · 32 km</option></select
+        ><label class="setting-label" for="quality">RENDER QUALITY</label
+        ><select id="quality">
+          <option value="auto">Adaptive · target 60 FPS</option>
+          <option value="high">High · full detail</option>
+          <option value="balanced">Balanced · lighter rendering</option></select
+        ><label class="setting-label" for="cruise"
+          >AUTO-DRIVE PACE <span id="cruise-label">72 km/h</span></label
+        ><input
+          id="cruise"
+          type="range"
+          min="35"
+          max="100"
+          value="72"
+          step="1"
+        /><label class="setting-label" for="seed">LANDSCAPE SEED</label>
+        <form id="seed-form">
+          <input
+            id="seed"
+            value="8147"
+            maxlength="16"
+            aria-label="Landscape seed"
+          /><button type="submit">New road ↗</button>
+        </form>
+        <button id="shuffle" class="subtle-button">↻ &nbsp; Surprise me</button>
+        <p class="panel-note">
+          The road keeps going. Auto-drive follows the left lane; steer or brake
+          to take over.
+        </p>
+        <p class="panel-note asset-credit">
+          Car model by
+          <a
+            href="https://sketchfab.com/3d-models/ferrari-458-italia-57bf6cc56931426e87494f554df1dab6"
+            target="_blank"
+            rel="noopener"
+            >vicent091036</a
+          >
+          ·
+          <a
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noopener"
+            >CC BY 4.0</a
+          >. Materials and animation adapted for High Country.
+        </p>
+      </aside>
+      <div id="drive-hud">
+        <div class="journey">
+          <div class="map-wrap">
+            <canvas
+              id="route-map"
+              width="240"
+              height="240"
+              aria-label="Map of the road ahead"
+            ></canvas
+            ><span class="map-north">AHEAD</span
+            ><span class="map-scale">500 M</span>
+          </div>
+          <div class="journey-text">
+            <span class="eyebrow" id="region-label">SNOW GUM COUNTRY</span>
+            <div><span id="trip">0.00</span><small> KM DRIVEN</small></div>
+            <p>
+              <span id="elevation">1,080 M</span> <span>·</span> SEED
+              <span id="seed-display">8147</span>
+            </p>
+          </div>
+        </div>
+        <div class="speedometer">
+          <div class="speed-top">
+            <span id="surface-label">VALLEY ROAD</span><span id="gear">D</span>
+          </div>
+          <div class="speed-value">
+            <strong id="speed">0</strong><span>KM/H</span>
+          </div>
+          <div class="speed-track"><i id="speed-fill"></i></div>
+          <span id="driving-mode">READY WHEN YOU ARE</span>
+        </div>
+      </div>
+      <nav class="drive-dock" aria-label="Driving controls">
+        <button id="pause" title="Pause / resume (Esc)">
+          <span id="pause-symbol">▶</span
+          ><span id="pause-label">Drive</span></button
+        ><button id="autodrive" aria-pressed="false" title="Auto-drive (E)">
+          <span>⌁</span><span>Auto-drive</span></button
+        ><button id="camera-toggle" title="Change camera (C)">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 7h4l2-3h4l2 3h4v13H4z" />
+            <circle cx="12" cy="13" r="4" /></svg
+          ><span id="camera-label">Chase</span></button
+        ><button id="reset" title="Return to road (R)">
+          <span>↺</span><span>Reset</span></button
+        ><button id="photo" title="Free camera (P)">
+          <svg viewBox="0 0 24 24">
+            <path d="m4 17 5-7 4 4 3-5 5 8zM4 4h17v16H4z" /></svg
+          ><span>Photo mode</span>
+        </button>
+      </nav>
+      <div class="controls">
+        <span><kbd>W / ↑</kbd> accelerate</span
+        ><span><kbd>S / ↓</kbd> brake / reverse</span
+        ><span><kbd>A D / ← →</kbd> steer</span
+        ><span><kbd>SPACE</kbd> handbrake</span
+        ><span><kbd>DRAG</kbd> look around</span
+        ><span><kbd>H</kbd> hide interface</span
+        ><button id="fullscreen" aria-label="Toggle fullscreen">
+          ⛶ Fullscreen
+        </button>
+      </div>
+      <div id="touch-controls">
+        <div>
+          <button data-touch="left" aria-label="Steer left">←</button
+          ><button data-touch="right" aria-label="Steer right">→</button>
+        </div>
+        <div>
+          <button data-touch="brake" aria-label="Brake">BRK</button
+          ><button data-touch="throttle" aria-label="Accelerate">GO</button>
+        </div>
+      </div>
+    </div>
+    <div id="photo-hint" hidden>
+      PHOTO MODE
+      <span
+        >WASD move · Space / Ctrl rise &amp; fall · Drag look · P return to
+        car</span
+      >
+    </div>
+    <div id="toast" role="status"></div>
+    <div id="error" hidden>
+      <h1>A little technical detour.</h1>
+      <p id="error-message"></p>
+      <button onclick="location.reload()">Try again</button>
+    </div>
+  </body>
+</html>

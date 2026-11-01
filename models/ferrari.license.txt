@@ -1,0 +1,12 @@
+Ferrari 458 Italia
+Author: vicent091036
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: https://creativecommons.org/licenses/by/4.0/
+Original source: https://sketchfab.com/3d-models/ferrari-458-italia-57bf6cc56931426e87494f554df1dab6
+Official distributed GLB: https://threejs.org/examples/models/gltf/ferrari.glb
+Official example credit: https://threejs.org/examples/webgl_materials_car.html
+Official repository license record: https://github.com/mrdoob/three.js/issues/23089#issuecomment-1001258942
+
+GLB downloaded unchanged. The game's materials and vehicle animation may be adapted for presentation; those changes do not replace the author's attribution.
+
+SHA-256: cafe3f48da6797aa9bde75ca768bc5b57db366575fd233e90df186ae988a876e
